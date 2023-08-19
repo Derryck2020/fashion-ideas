@@ -5,7 +5,33 @@ import styled from 'styled-components';
 import Error from './Error';
 import Loading from './Loading';
 import Product from './Product';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 const FeaturedProducts = () => {
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 800,
+		slidesToShow: 3,
+		slidesToScroll: 2,
+		autoplay: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
+	};
 	const {
 		products_loading: loading,
 		products_error: error,
@@ -24,9 +50,11 @@ const FeaturedProducts = () => {
 				<div className="underline"></div>
 			</div>
 			<div className="section-center featured">
-				{featured.slice(0, 3).map((product) => {
-					return <Product key={product.id} {...product} />;
-				})}
+				<Slider {...settings}>
+					{featured.map((product) => {
+						return <Product key={product.id} {...product} />;
+					})}
+				</Slider>
 			</div>
 			<Link to="/products" className="btn">
 				all products
@@ -40,7 +68,6 @@ const Wrapper = styled.section`
   .featured {
     margin: 4rem auto;
     display: grid;
-    gap: 2.5rem;
     img {
       height: 250px;
     }
