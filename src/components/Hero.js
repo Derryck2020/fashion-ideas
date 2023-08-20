@@ -9,14 +9,12 @@ const Hero = () => {
 		<Wrapper className="section-center">
 			<article className="content">
 				<h1>
-					Leave with a <br />
-					satisfaction.
+					Elevate <br />
+					Your Style.
 				</h1>
 				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
-					at sed omnis corporis doloremque possimus velit! Repudiandae nisi
-					odit, aperiam odio ducimus, obcaecati libero et quia tempora
-					excepturi quis alias?
+					Discover the Perfect Blend of Fashion and Elegance. Shop Now for
+					Unmatched Trends and Timeless Classics!
 				</p>
 				<Link to="/products" className="btn hero-btn">
 					shop now
