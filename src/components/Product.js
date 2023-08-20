@@ -24,6 +24,8 @@ const Wrapper = styled.article`
     position: relative;
     background: var(--clr-black);
     border-radius: var(--radius);
+    margin-left: 1rem;
+    border: 2px solid var(--clr-grey-8);
   }
   img {
     width: 100%;
@@ -66,6 +68,7 @@ const Wrapper = styled.article`
   }
   footer h5,
   footer p {
+    margin-left: 1rem;
     margin-bottom: 0;
     font-weight: 400;
   }
