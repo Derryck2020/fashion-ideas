@@ -42,32 +42,33 @@ const Footer = () => {
 						const { icon } = social_icon;
 						return (
 							<ul>
-								<li>{icon}</li>
+								<li>
+									<a href="/">{icon}</a>
+								</li>
 							</ul>
 						);
 					})}
 				</div>
 			</div>
-			{/* <div className="footer__bottom">
+			<div className="footer__bottom">
 				<h5>
 					&copy; {new Date().getFullYear()}
 					<span> Fashion Dial Collections </span>
 				</h5>
 				<h5>All rights reserved</h5>
-			</div> */}
+			</div>
 		</Container>
 	);
 };
 
 const Container = styled.footer`
-  height: 20rem;
+  height: 23rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: var(--clr-grey-7);
   text-align: center;
-  border: 2px solid red;
   span {
     color: var(--clr-primary-5);
   }
@@ -78,24 +79,33 @@ const Container = styled.footer`
     text-transform: none;
     line-height: 1.25;
   }
+  .footer__bottom {
+	background: var(--clr-grey-1);
+	width: 100%;
+	margin-top: 1rem;
+  }
   @media (min-width: 476px) {
     .footer__container{
       display: grid;
       grid-template-columns: repeat(3, 1fr)
     }
     .footer-section{
-      text-align: left;
+      text-align: center;
     }
     .footer-section ul {
       line-height: 2rem;
       text-transform: capitalize;
     }
-    .footer-section ul li a {
+	.social__icons ul{
+		line-height: 2.5rem;
+	}
+    .footer-section ul li a, .social__icons ul li a  {
       color: var(--clr-primary-5);
     }
-    .footer-section ul li a:hover {
-      color: var(--clr-primary-2);
+    .footer-section ul li a:hover, .social__icons ul li a:hover {
+      color: white;
     }
+
   }
 `;
 
