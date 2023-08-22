@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GiAmpleDress } from 'react-icons/gi';
-import womenImg from '../assets/about-bcg.jpg';
+import { GiAmpleDress, GiPoloShirt } from 'react-icons/gi';
+import womenImg from '../assets/women-2.jpg';
+import menImg from '../assets/men-11.jpg';
 import { services } from '../utils/constants';
 const Services = () => {
 	return (
@@ -17,7 +18,7 @@ const Services = () => {
 							<p>Endless Style Possibilities</p>
 						</div>
 						<a href="/" className="btn">
-							shop
+							shop here
 						</a>
 					</div>
 					<div className="women-image-container">
@@ -27,53 +28,65 @@ const Services = () => {
 							alt="image of women fashion collection"
 						/>
 					</div>
-					{/* <h3>
-						why choose FashionDial: <br /> Experience Fashion Redefined
-					</h3>
-					<p>
-						Where Quality Meets Style. Choose Us for a Curated Collection,
-						Seamless Shopping, and Unmatched Elegance. Elevate Your
-						Wardrobe Today!
-					</p> */}
 				</article>
-				{/* <div className="services-center">
-					{services.map((service) => {
-						const { id, icon, title, text } = service;
-						return (
-							<article className="service" key={id}>
-								<span className="icon">{icon}</span>
-								<h4>{title}</h4>
-								<p>{text}</p>
-							</article>
-						);
-					})}
-				</div> */}
+				<article className="men-container">
+					<div className="men-image-container">
+						<img
+							src={menImg}
+							className="men-img"
+							alt="image of men fashion collection"
+						/>
+					</div>
+					<div className="men-caption">
+						<span>
+							<GiPoloShirt />
+						</span>
+						<div className="text">
+							<h2>Dress Beyond Words</h2>
+							<p>Let Your Outfit Speak</p>
+						</div>
+						<a href="/" className="btn">
+							shop here
+						</a>
+					</div>
+				</article>
 			</div>
 		</Wrapper>
 	);
 };
 
 const Wrapper = styled.section`
-  border: 2px solid red;
+
   h3,
   h4 {
     color: var(--clr-primary-1);
   }
-  padding: 2rem 0;
   background: var(--clr-primary-10);
-
-  .women-container{
+  .section-center{
+    display:grid;
+    gap: 2rem;
+  }
+  .women-container,.men-container{
     display: grid;
     gap: 1rem;
-    border: 4px solid pink;
   }
-  .women-caption {
+  .women-caption,.men-caption {
     height: 30rem;
-
   }
-  .women-caption span {
-    margin: 2rem auto;
-    color: var(--clr-primary-5)
+  span {
+    width: 4rem;
+    height: 4rem;
+    display: grid;
+    margin: 0 auto;
+    place-items: center;
+    margin-bottom: 1rem;
+    color: #8fcbf7;
+    svg {
+      font-size: 2.5rem;
+    }
+  }
+  .men-caption span {
+    color: #0c0a09;
   }
   .text {
     margin: 2rem auto;
@@ -95,22 +108,18 @@ const Wrapper = styled.section`
     padding: 2rem 0;
     margin: 0 auto;
     text-align: center;
+    background: #8fcbf7;
   }
-
-  p {
-    font-size: 1.1rem;
-    margin-bottom: 0;
-    line-height: 1.8;
-    color: var(--clr-primary-3);
+  .btn:hover {
+    background: #fdc2cc;
+    color: #87ceeb;
   }
-  .services-center {
-    margin-top: 4rem;
-    display: grid;
-    gap: 2.5rem;
+  .men-caption .btn {
+    background: #0c0a09;
   }
-  .women-img {
+  .women-img,.men-img {
       width: 100%;
-      height: 450px;
+      height: 30rem;
       position: relative;
       border-radius: var(--radius);
       display: block;
@@ -125,29 +134,12 @@ const Wrapper = styled.section`
       color: var(--clr-primary-2);
     }
   }
-  span {
-    width: 4rem;
-    height: 4rem;
-    display: grid;
-    margin: 0 auto;
-    place-items: center;
-    margin-bottom: 1rem;
-    border-radius: 50%;
-    background: var(--clr-primary-10);
-    color: var(--clr-primary-1);
-    svg {
-      font-size: 2rem;
-    }
-  }
-  @media (min-width: 992px) {
-    .header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
   @media (min-width: 576px) {
-    .services-center {
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    .women-container,.men-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .section-center{
+      height:160vh;
     }
   }
   @media (min-width: 1280px) {
