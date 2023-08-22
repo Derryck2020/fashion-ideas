@@ -27,7 +27,7 @@ const Contact = () => {
 	);
 };
 const Wrapper = styled.section`
-  padding: 5rem 0;
+  padding: 3rem 0;
   h3 {
     text-transform: none;
   }
@@ -88,7 +88,7 @@ const Wrapper = styled.section`
     }
   }
   @media (min-width: 1280px) {
-    padding: 15rem 0;
+    padding: 10rem 0;
   }
 `;
 
