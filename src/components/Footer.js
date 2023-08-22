@@ -62,7 +62,7 @@ const Footer = () => {
 };
 
 const Container = styled.footer`
-  height: 23rem;
+  height: 32rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,12 +82,15 @@ const Container = styled.footer`
   .footer__bottom {
 	background: var(--clr-grey-1);
 	width: 100%;
-	margin-top: 1rem;
+	padding: 2rem 0;
+
   }
   @media (min-width: 476px) {
     .footer__container{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr)
+		height: 30rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-bottom: 2rem;
     }
     .footer-section{
       text-align: center;
@@ -105,7 +108,6 @@ const Container = styled.footer`
     .footer-section ul li a:hover, .social__icons ul li a:hover {
       color: white;
     }
-
   }
 `;
 
