@@ -117,6 +117,10 @@ const Wrapper = styled.section`
   .men-caption .btn {
     background: #0c0a09;
   }
+  .men-caption .btn:hover {
+    color: #0c0a09;
+    background: white;
+  }
   .women-img,.men-img {
       width: 100%;
       height: 30rem;
