@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
 				},
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 375,
 				settings: {
 					slidesToShow: 1,
 				},
@@ -52,6 +52,7 @@ const FeaturedProducts = () => {
 			<div className="section-center featured">
 				<Slider {...settings}>
 					{featured.map((product) => {
+						console.log(product);
 						return <Product key={product.id} {...product} />;
 					})}
 				</Slider>
