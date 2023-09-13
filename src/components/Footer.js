@@ -13,9 +13,9 @@ const Footer = () => {
 				<div className="footer-section">
 					<h3>customer care</h3>
 					{customer_service.map((service) => {
-						const { text } = service;
+						const { text, id } = service;
 						return (
-							<ul>
+							<ul key={id}>
 								<li>
 									<a href="/">{text}</a>
 								</li>
@@ -26,9 +26,9 @@ const Footer = () => {
 				<div className="footer-section">
 					<h3>about fashion dial</h3>
 					{about_fashion_dial.map((service) => {
-						const { text } = service;
+						const { text, id } = service;
 						return (
-							<ul>
+							<ul key={id}>
 								<li>
 									<a href="/">{text}</a>
 								</li>
@@ -39,9 +39,9 @@ const Footer = () => {
 				<div className="social__icons">
 					<h3>Connect </h3>
 					{social_icons.map((social_icon) => {
-						const { icon } = social_icon;
+						const { icon, id } = social_icon;
 						return (
-							<ul>
+							<ul key={id}>
 								<li>
 									<a href="/">{icon}</a>
 								</li>
